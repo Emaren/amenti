@@ -19,9 +19,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: store_test
+  database: 
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: store_development
+  database:
