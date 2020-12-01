@@ -4,6 +4,7 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
+
 # configure :development do
 #   set :database, "sqlite3:///database.db"
 # end
