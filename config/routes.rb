@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
-   root 'welcome#index'
+  devise_for :authors
+  get 'home/index'
+   root 'home#index'
 
 end
