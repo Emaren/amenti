@@ -15,3 +15,27 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import '../stylesheets/application';
+require("trix")
+require("@rails/actiontext")
+
+
+document.addEventListener('turbolinks:load', () => {
+  document.addEventListener('click', () => {
+    let element = event.target.closest('.paragraph-content')
+    if (!element) return;
+
+    element.classList.add('d-none')
+    element.nextElementSibling.classList.remove('d-none')
+  })
+
+  ddocument.addEventListener('click', () => {
+    if (!event.target.matches('.cancel')) return;
+
+    let element = event.target.closest('.paragraph-content')
+
+    element.classList.add('d-none')
+    element.previousElementSibling.classList.remove('d-none')
+  })
+})
