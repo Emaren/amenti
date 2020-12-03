@@ -6,8 +6,10 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  scope module: 'authors' do
-  resources :posts
-  end
+    scope module: 'authors' do
+      resources :posts do
+        resources :elements
+      end
+    end
 
 end
